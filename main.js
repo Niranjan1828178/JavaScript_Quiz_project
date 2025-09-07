@@ -1,14 +1,26 @@
-// const { use } = require("react");
+import Signin from "./signin.js"
 
+let homebtn = document.querySelector(".home");
 let maincontainer = document.querySelector(".maincontainer");
 let initialcontent = maincontainer.innerHTML;
-let homebtn = document.querySelector(".home");
+
+let signinbtn=document.querySelector(".signin");
+signinbtn.addEventListener('click',()=>{
+  homebtn.classList.remove("hidden");
+  signinbtn.classList.add("hidden");
+  Signin()
+})
+
+
+
 homebtn.addEventListener("click", () => {
   maincontainer.innerHTML = initialcontent;
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
-});
+  signinbtn.classList.remove("hidden");
+  homebtn.classList.add("hidden");
 
+});
 async function QuizCards() {
   maincontainer.classList.remove("flex-row");
   maincontainer.classList.add("flex-col");
@@ -87,6 +99,9 @@ let quizbtn1 = document.querySelector(".Quiz1");
 
 quizbtn1.addEventListener("click", () => {
   maincontainer.innerHTML = "";
+  homebtn.classList.remove("hidden");
+  homebtn.classList.add("flex");
+  signinbtn.classList.add("hidden");
   QuizCards();
 });
 
@@ -292,13 +307,13 @@ async function QuizPage(topic) {
       optionElement.classList.add("px-5", "py-2");
       optionElement.innerText = option;
       if (userAnswers[index] === optionIndex) {
-        optionbox.classList.add("bg-green-500", "text-white");
+        optionbox.classList.add("bg-green-400", "text-white");
         optionbox.children[0].innerHTML=`<i class="fa-solid fa-check text-black"></i>`;
       }
       optionbox.addEventListener("click", () => {
         userAnswers[index] = optionIndex;
         Array.from(optionsContainer.children).forEach((child) => {
-          child.classList.remove("bg-green-500", "text-white");
+          child.classList.remove("bg-green-400", "text-white");
           child.children[0].classList.remove("bg-white");
           child.children[0].innerHTML="";
         });
@@ -307,9 +322,9 @@ async function QuizPage(topic) {
         Object.keys(userAnswers).map((val) => {
           nav[val].classList.remove("bg-white");
           nav[val].classList.remove("bg-gray-500");
-          nav[val].classList.add("bg-green-500");
+          nav[val].classList.add("bg-green-400");
         });
-        optionbox.classList.add("bg-green-500", "text-white");
+        optionbox.classList.add("bg-green-400", "text-white");
         optionbox.children[0].classList.add("bg-white");
         optionbox.children[0].innerHTML=`<i class="fa-solid fa-check text-black"></i>`;
 
