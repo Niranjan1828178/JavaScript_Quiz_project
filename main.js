@@ -1,10 +1,19 @@
 import Signin from "./signin.js"
-
+//buttons and containers
 let homebtn = document.querySelector(".home");
-let maincontainer = document.querySelector(".maincontainer");
-let initialcontent = maincontainer.innerHTML;
-
+let quizbutton = document.querySelector(".quiz");
+let startquizbtn = document.querySelector(".Quiz1");
 let signinbtn=document.querySelector(".signin");
+let maincontainer = document.querySelector(".maincontainer");
+//storing variables
+let Homecontent = maincontainer.innerHTML;
+let userAnswers = {};
+let selectedQuestionIndexs = [];
+let Questions;
+
+
+
+//Signin Calling
 signinbtn.addEventListener('click',()=>{
   homebtn.classList.remove("hidden");
   signinbtn.classList.add("hidden");
@@ -12,15 +21,28 @@ signinbtn.addEventListener('click',()=>{
 })
 
 
-
+//Home Page calling
 homebtn.addEventListener("click", () => {
-  maincontainer.innerHTML = initialcontent;
+  maincontainer.innerHTML = Homecontent;
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
   signinbtn.classList.remove("hidden");
   homebtn.classList.add("hidden");
+  quizbutton.classList.add("hidden");
 
 });
+
+//Start Quiz
+ startquizbtn.addEventListener("click", () => {
+  maincontainer.innerHTML = "";
+  homebtn.classList.remove("hidden");
+  homebtn.classList.add("flex");
+  signinbtn.classList.add("hidden");
+  QuizCards();
+});
+
+
+//Quiz Cards
 async function QuizCards() {
   maincontainer.classList.remove("flex-row");
   maincontainer.classList.add("flex-col");
@@ -95,16 +117,10 @@ async function QuizCards() {
 
   maincontainer.appendChild(cardContainer);
 }
-let quizbtn1 = document.querySelector(".Quiz1");
 
-quizbtn1.addEventListener("click", () => {
-  maincontainer.innerHTML = "";
-  homebtn.classList.remove("hidden");
-  homebtn.classList.add("flex");
-  signinbtn.classList.add("hidden");
-  QuizCards();
-});
 
+
+//Questions navigation components
 let navigationbox = document.createElement("div");
 navigationbox.classList.add(
   "w-[10%]",
@@ -125,27 +141,23 @@ navigationContainer.classList.add(
   "items-center",
   "justify-center",
   "text-[#6B4F44]",
-  // "mx-1"
   "gap-x-1"
 );
-// let score = 0;
-let userAnswers = {};
-let selectedQuestionIndexs = [];
-let Questions;
+
+
+//Quiz Page
 async function QuizPage(topic) {
+  quizbutton.classList.remove("hidden");
   let response = await fetch("./src/assets/Topics.json");
   let data = await response.json();
   let selectedTopic = data.find((obj) => obj.topic === topic);
-  // console.log(selectedTopic);
   Questions = selectedTopic.questions;
-  // console.log(Questions);
   while (selectedQuestionIndexs.length < 10) {
     let randomIndex = Math.floor(Math.random() * Questions.length);
     if (!selectedQuestionIndexs.includes(randomIndex)) {
       selectedQuestionIndexs.push(randomIndex);
     }
   }
-  // console.log(selectedQuestionIndexs);
   maincontainer.innerHTML = "";
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
@@ -155,7 +167,6 @@ async function QuizPage(topic) {
     "md:w-[60%]",
     "w-[90]",
     "h-full",
-    // "bg-white",
     "flex",
     "flex-col",
     "gap-3",
@@ -164,7 +175,6 @@ async function QuizPage(topic) {
   );
   navigationbox.appendChild(navigationContainer);
   maincontainer.appendChild(navigationbox);
-  // let rulescontainer=document.createElement("div");
   let ruleHeading = document.createElement("h1");
   ruleHeading.classList.add(
     "text-2xl",
@@ -173,7 +183,6 @@ async function QuizPage(topic) {
     "text-black"
   );
   ruleHeading.innerText = "Rules to follow:";
-  // console.log(ruleHeading);
   questionContainer.appendChild(ruleHeading);
   let rulesblock = document.createElement("div");
   rulesblock.classList.add("flex", "flex-col", "gap-3");
@@ -240,13 +249,9 @@ async function QuizPage(topic) {
   );
   submitbtn.innerText = "Submit";
   navigationbox.appendChild(submitbtn);
-  // let nav = navigationContainer.children;
   submitbtn.addEventListener("click", () => {
-    // console.log(userAnswers);
     let score = 0;
     Object.keys(userAnswers).map((val) => {
-      // console.log(Questions[selectedQuestionIndexs[val]]["question"]);
-      // console.log("q:",selectedQuestionIndexs[val],"uo:",userAnswers[val],"Ao",Questions[selectedQuestionIndexs[val]]["answer"]);
       if (
         Questions[selectedQuestionIndexs[val]]["answer"] == userAnswers[val]
       ) {
@@ -254,7 +259,6 @@ async function QuizPage(topic) {
       }
     });
     ResultPage(score);
-    // console.log("final score:",score);
   });
   function loadQuestion(index) {
     let questionblock = document.createElement("h1");
@@ -299,7 +303,6 @@ async function QuizPage(topic) {
         "w-5",
         "h-5",
         "border",
-        // "hover:border-white",
         "border-black",
       );
       optionbox.appendChild(radio);
@@ -307,29 +310,25 @@ async function QuizPage(topic) {
       optionElement.classList.add("px-5", "py-2");
       optionElement.innerText = option;
       if (userAnswers[index] === optionIndex) {
-        optionbox.classList.add("bg-green-400", "text-white");
+        optionbox.classList.add("bg-green-600", "text-white");
         optionbox.children[0].innerHTML=`<i class="fa-solid fa-check text-black"></i>`;
       }
       optionbox.addEventListener("click", () => {
         userAnswers[index] = optionIndex;
         Array.from(optionsContainer.children).forEach((child) => {
-          child.classList.remove("bg-green-400", "text-white");
+          child.classList.remove("bg-green-600", "text-white");
           child.children[0].classList.remove("bg-white");
           child.children[0].innerHTML="";
         });
-        // console.log("starting", index);
         let nav = Array.from(navigationContainer.children);
         Object.keys(userAnswers).map((val) => {
           nav[val].classList.remove("bg-white");
           nav[val].classList.remove("bg-gray-500");
-          nav[val].classList.add("bg-green-400");
+          nav[val].classList.add("bg-green-600");
         });
-        optionbox.classList.add("bg-green-400", "text-white");
+        optionbox.classList.add("bg-green-600", "text-white");
         optionbox.children[0].classList.add("bg-white");
         optionbox.children[0].innerHTML=`<i class="fa-solid fa-check text-black"></i>`;
-
-
-        // console.log(userAnswers);
       });
       optionbox.appendChild(optionElement);
       optionsContainer.appendChild(optionbox);
@@ -337,7 +336,7 @@ async function QuizPage(topic) {
     questionContainer.appendChild(optionsContainer);
   }
 
-  //details
+  //Quiz Tracking Component
   let tracking = document.createElement("div");
   tracking.classList.add(
     "w-[25%]",
@@ -351,6 +350,7 @@ async function QuizPage(topic) {
   maincontainer.appendChild(tracking);
 }
 
+//Result Page
 function ResultPage(score) {
   maincontainer.innerText = score;
 }
