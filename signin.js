@@ -9,8 +9,11 @@ SigninPage();
 export default signup
 
 function SigninPage(){
+    let homebtn=document.querySelector(".home");
+    homebtn.innerText="Home";
     let maincontainer=document.querySelector(".maincontainer");
     maincontainer.innerHTML="";
+    maincontainer.classList.remove("justify-start");
     maincontainer.classList.add("justify-center");
     //Signin Block
     let signinblock=document.createElement("div");
