@@ -1,59 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Website</title>
-    <link rel="icon" href="./src/assets/logo.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./src/style/output.css" />
-  </head>
-  <body class="bg-[#DBD3D1]">
-    <nav
-      class="w-full h-[30%] pt-2 px-10 flex flex-row items-center justify-around text-[#6B4F44]"
-    >
-      <article
-        class="font-serif font-extrabold tracking-[5px] text-3xl p-4 w-[70%]"
-      >
-        <img src="./src/assets/logo.png" alt="Logo" class="h-10 inline mr-1" />
-        Quiz
-      </article>
-      <section
-        class="w-[30%] flex flex-col gap-2 sm:flex-row items-center justify-end "
-      >
-        <a
-          class="signin bg-[#A37C6A] transition duration-400 hover:text-stone-700  hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
-          href="#"
-          >SignUp</a
-        >
-        <!--
-      <a
-        class="Quiz bg-[#A37C6A] transition duration-400 hover:text-stone-700  text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg "
-        href=""
-        >Quiz</a
-      >
-      -->
-        <a
-          class="home hidden bg-[#A37C6A] transition duration-400 hover:text-stone-700  hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
-          href="#"
-          >Log Out</a
-        >
-        <a
-          class="quiz hidden bg-[#A37C6A] transition duration-400 hover:text-stone-700  hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
-          href="#"
-          >Topics</a
-        >
-      </section>
-    </nav>
-    <section class="maincontainer px-2 w-full h-[60%] flex flex-row">
-      
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Website</title>
+  <link rel="icon" href="./src/assets/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./src/style/output.css" />
+</head>
+
+<body class="bg-[#DBD3D1]">
+  <!-- Navbar -->
+  <nav class="w-full h-[30%] pt-2 px-10 flex flex-row items-center justify-around text-[#6B4F44]">
+    <article class="font-serif font-extrabold tracking-[5px] text-3xl p-4 w-[70%]">
+      <img src="./src/assets/logo.png" alt="Logo" class="h-10 inline mr-1" />
+      Quiz
+    </article>
+    <section class="w-[30%] flex flex-col gap-2 sm:flex-row items-center justify-end">
+      <a class="signin bg-[#A37C6A] transition duration-400 hover:text-stone-700 hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
+        href="#">SignUp</a>
+      <a class="home hidden bg-[#A37C6A] transition duration-400 hover:text-stone-700 hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
+        href="#">Log Out</a>
+      <a class="quiz hidden bg-[#A37C6A] transition duration-400 hover:text-stone-700 hover:bg-[#D3C5B8] text-[#F5F0EF] font-serif font-semibold px-1 py-1 text-sm rounded-md mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
+        href="#">Topics</a>
     </section>
-    <script type="module" src="./main.js"></script>
-  </body>
+  </nav>
+
+  <!-- Main Container -->
+  <section class="maincontainer px-2 w-full h-[60%] flex flex-row"></section>
+  <script type="module" src="./main.js"></script>
+</body>
 </html>
