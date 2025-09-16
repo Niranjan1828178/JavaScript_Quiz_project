@@ -1,63 +1,65 @@
 
 import QuizCards from "./quizcard.js";
 import ResultPage from "./resultpage.js";
-import HomePage from "./home.js";
+// import HomePage from "./home.js";
 
-const DB_URL="http://localhost:5001/Topics";
+const DB_URL = "http://localhost:5001/Topics";
 const quizpage = (val) => {
-QuizPage(val)
+    QuizPage(val)
 }
 
 export default quizpage
 let quizbutton = document.querySelector(".quiz");
 let maincontainer = document.querySelector(".maincontainer");
-let userAnswers = {};
-let selectedQuestionIndexs = [];
-let Questions;
 let homebtn = document.querySelector(".home");
 let signinbtn = document.querySelector(".signin");
 
-//Listening home
-homebtn.addEventListener("click", () => {
-    event.preventDefault();
-  maincontainer.classList.remove("flex-col");
-  maincontainer.classList.add("flex-row");
-  signinbtn.classList.remove("hidden");
-  homebtn.classList.add("hidden");
-  quizbutton.classList.add("hidden");
-  HomePage();
-});
+// //Listening home
+// homebtn.addEventListener("click", () => {
+//     event.preventDefault();
+//     maincontainer.classList.remove("flex-col");
+//     maincontainer.classList.add("flex-row");
+//     signinbtn.classList.remove("hidden");
+//     homebtn.classList.add("hidden");
+//     quizbutton.classList.add("hidden");
+//     HomePage();
+// });
 
 //Question Navigation section
 let navigationbox = document.createElement("div");
 navigationbox.classList.add(
-  "navigationbox",
-  "w-[10%]",
-  "xs:w-[13%]",
-  "flex",
-  "flex-col",
-  "items-center",
-  "pt-10"
+    "navigationbox",
+    "w-[10%]",
+    "xs:w-[13%]",
+    "flex",
+    "flex-col",
+    "items-center",
+    "pt-10"
 );
 let navigationContainer = document.createElement("div");
 navigationContainer.classList.add(
-  "navigationContainer",
-  "w-[60%]",
-  "xs:h-80",
-  "h-[90%]",
-  "grid",
-  "xs:grid-cols-2",
-  "grid-cols-1",
-  "items-center",
-  "justify-center",
-  "text-[#6B4F44]",
-  "gap-x-1"
+    "navigationContainer",
+    "w-[60%]",
+    "xs:h-80",
+    "h-[90%]",
+    "grid",
+    "xs:grid-cols-2",
+    "grid-cols-1",
+    "items-center",
+    "justify-center",
+    "text-[#6B4F44]",
+    "gap-x-1"
 );
 
 
 
 //Quiz Page
 async function QuizPage(topic) {
+    let userAnswers = {};
+    let selectedQuestionIndexs = [];
+    let Questions;
+    navigationbox.innerHTML = ''
+    navigationContainer.innerHTML = ''
     quizbutton.classList.remove("hidden");
     maincontainer.classList.remove("justify-center");
     maincontainer.classList.add("justify-start");
@@ -165,6 +167,7 @@ async function QuizPage(topic) {
     submitbtn.innerText = "Submit";
     navigationbox.appendChild(submitbtn);
     submitbtn.addEventListener("click", () => {
+        let feedbackQandA = []
         let score = 0;
         Object.keys(userAnswers).map((val) => {
             if (
@@ -172,8 +175,25 @@ async function QuizPage(topic) {
             ) {
                 score++;
             }
+            feedbackQandA.push({
+                question: Questions[selectedQuestionIndexs[val]]["question"],
+
+                options: Questions[selectedQuestionIndexs[val]]["options"],
+                correctAnswer: Questions[selectedQuestionIndexs[val]]["options"][Questions[selectedQuestionIndexs[val]]["answer"]],
+                yourAnswer: Questions[selectedQuestionIndexs[val]]["options"][userAnswers[val]]
+            })
         });
-        ResultPage(score);
+        for (let i = 0; i < 10; i++) {
+            if (!Object.keys(userAnswers).includes(String(i))) {
+                feedbackQandA.push({
+                    question: Questions[selectedQuestionIndexs[i]]["question"],
+                    options: Questions[selectedQuestionIndexs[i]]["options"],
+                    correctAnswer: Questions[selectedQuestionIndexs[i]]["options"][Questions[selectedQuestionIndexs[i]]["answer"]],
+                    yourAnswer: "Not Answered"
+                })
+            }
+        }
+        ResultPage(topic, feedbackQandA, score);
     });
     function loadQuestion(index) {
         let questionblock = document.createElement("h1");
@@ -223,13 +243,13 @@ async function QuizPage(topic) {
             optionElement.classList.add("px-5", "py-2");
             optionElement.innerText = option;
             if (userAnswers[index] === optionIndex) {
-                optionbox.classList.add("bg-green-600", "text-white");
+                optionbox.classList.add("bg-green-500", "text-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
             }
             optionbox.addEventListener("click", () => {
                 userAnswers[index] = optionIndex;
                 Array.from(optionsContainer.children).forEach((child) => {
-                    child.classList.remove("bg-green-600", "text-white");
+                    child.classList.remove("bg-green-500", "text-white");
                     child.children[0].classList.remove("bg-white");
                     child.children[0].innerHTML = "";
                 });
@@ -237,9 +257,9 @@ async function QuizPage(topic) {
                 Object.keys(userAnswers).map((val) => {
                     nav[val].classList.remove("bg-white");
                     nav[val].classList.remove("bg-gray-500");
-                    nav[val].classList.add("bg-green-600");
+                    nav[val].classList.add("bg-green-500");
                 });
-                optionbox.classList.add("bg-green-600", "text-white");
+                optionbox.classList.add("bg-green-500", "text-white");
                 optionbox.children[0].classList.add("bg-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
             });
@@ -252,15 +272,15 @@ async function QuizPage(topic) {
 
 //Listening to QuizButton
 quizbutton.addEventListener("click", () => {
-  maincontainer.innerHTML = "";
-  homebtn.classList.remove("hidden");
-  homebtn.classList.add("flex");
-  signinbtn.classList.add("hidden");
-  quizbutton.classList.add("hidden");
-  navigationContainer.innerHTML = "";
-  if (navigationbox.lastChild) {
-    navigationbox.removeChild(navigationbox.lastChild);
-  }
-  userAnswers = {};
-  QuizCards();
+    maincontainer.innerHTML = "";
+    homebtn.classList.remove("hidden");
+    homebtn.classList.add("flex");
+    signinbtn.classList.add("hidden");
+    quizbutton.classList.add("hidden");
+    navigationContainer.innerHTML = "";
+    if (navigationbox.lastChild) {
+        navigationbox.removeChild(navigationbox.lastChild);
+    }
+
+    QuizCards();
 });

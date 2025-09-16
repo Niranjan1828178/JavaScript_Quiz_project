@@ -10,20 +10,34 @@ let maincontainer = document.querySelector(".maincontainer");
 let homebtn = document.querySelector(".home");
 let quizbutton = document.querySelector(".quiz");
 let signinbtn = document.querySelector(".signin");
-
+let logoutbtn = document.querySelector(".logout");
 //Listening to home
-homebtn.addEventListener("click", async () => {
+homebtn.addEventListener("click", () => {
   event.preventDefault();
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
   signinbtn.classList.remove("hidden");
   homebtn.classList.add("hidden");
   quizbutton.classList.add("hidden");
-  HomePage();
+  logoutbtn.classList.remove("hidden");
+  logoutbtn.classList.add("flex");
+  if(localStorage.getItem=="user"){HomePage(true);}
+  else{HomePage(false);}
 });
+
+logoutbtn.addEventListener("click", () => {
+  event.preventDefault();
+  localStorage.setItem("state","index");
+  logoutbtn.classList.remove("flex");
+  logoutbtn.classList.add("hidden");
+  HomePage(false);
+});
+
 //Quiz Cards
 async function QuizCards() {
-  homebtn.innerText = "Log Out";
+  logoutbtn.classList.remove("hidden");
+  logoutbtn.classList.add("flex");
+  signinbtn.classList.add("hidden");
   maincontainer.classList.remove("flex-row");
   maincontainer.classList.add("flex-col");
   let QuizHeading = document.createElement("h1");

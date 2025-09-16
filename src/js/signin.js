@@ -1,15 +1,33 @@
 
 import Login from "./login.js";
+import HomePage from "./home.js";
 const USERS_URL = "http://localhost:5001/Users";
 const signup = () => {
     SigninPage();
 }
 
 export default signup
-
+let homebtn = document.querySelector(".home");
+let signupbtn=document.querySelector(".signin");
+let logout=document.querySelector(".logout");
+homebtn.addEventListener('click',()=>{
+    homebtn.classList.add('hidden')
+    signupbtn.classList.remove('hidden')
+    signupbtn.classList.add('flex')
+    logout.classList.remove('flex')
+    logout.classList.add('hidden')
+    if(localStorage.getItem("state")!="user" )
+        {HomePage(false);}
+    else{
+        HomePage(true);
+    }
+})
 function SigninPage() {
-    let homebtn = document.querySelector(".home");
-    homebtn.innerText = "Home";
+    signupbtn.classList.remove('flex')
+    signupbtn.classList.add('hidden')
+    homebtn.classList.remove('hidden')
+    logout.classList.add('hidden')
+    logout.classList.remove('flex')
     let maincontainer = document.querySelector(".maincontainer");
     maincontainer.innerHTML = "";
     maincontainer.classList.remove("justify-start");
@@ -92,6 +110,7 @@ function SigninPage() {
     linktologin.classList.add("LinkToLogin", "mt-4", "text-sm", "font-serif");
     linktologin.innerHTML = `Already have an account? <a href="#" class="linklogin text-blue-500 underline" id="linklogin">Login</a>`;
     linktologin.querySelector(".linklogin").addEventListener("click", () => {
+        localStorage.setItem("state","login");
         Login();
     })
     signinblock.appendChild(linktologin);
@@ -126,7 +145,7 @@ async function Register(username, password, confirmpassword) {
             username: username,
             password: password,
             role: "user",
-            score: {},
+            progress: {},
             isLoggedIn: false
         };
         await fetch(USERS_URL, {
@@ -137,6 +156,7 @@ async function Register(username, password, confirmpassword) {
             body: JSON.stringify(newUser)
         });
         // console.log("going to login page");
+        localStorage.setItem("state","login");
         Login();
         
     }

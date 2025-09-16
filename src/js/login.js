@@ -76,6 +76,7 @@ function loginPage() {
         linktosignup.classList.add("linktosignup","mt-4", "text-sm", "font-serif");
         linktosignup.innerHTML = `Don't have an account? <a href="#" class="linkSignup text-blue-500 underline" id="linklogin">Signup</a>`;
         linktosignup.querySelector(".linkSignup").addEventListener("click", () => {
+            localStorage.setItem("state","signin");
             Signin();
         })
         loginblock.appendChild(linktosignup);
@@ -97,6 +98,7 @@ async function Loginincheck(username, password) {
                 body: JSON.stringify({ isLoggedIn: true })
             });
             maincontainer.innerHTML = "";
+            localStorage.setItem("state", "user");
             QuizCard();
         }
         else {

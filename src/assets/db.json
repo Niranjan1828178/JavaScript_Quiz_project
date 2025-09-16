@@ -12,16 +12,249 @@
       "username": "niranjan",
       "password": "12345",
       "role": "user",
-      "score": {},
-      "isLoggedIn": true
+      "progress": {
+        "python": [
+          {
+            "score": 4,
+            "questions": [
+              {
+                "question": "How do you create a list in Python?",
+                "options": [
+                  "myList = ()",
+                  "myList = array()",
+                  "myList = []",
+                  "myList = {}"
+                ],
+                "correctAnswer": "myList = []",
+                "yourAnswer": "myList = []"
+              },
+              {
+                "question": "What is the purpose of the pass statement in Python?",
+                "options": [
+                  "To raise an exception",
+                  "To skip the current iteration of a loop",
+                  "To define an empty code block",
+                  "To exit a loop"
+                ],
+                "correctAnswer": "To define an empty code block",
+                "yourAnswer": "To define an empty code block"
+              },
+              {
+                "question": "What is the output of print(len([1, 2, 3]))?",
+                "options": [
+                  "3",
+                  "1",
+                  "2",
+                  "4"
+                ],
+                "correctAnswer": "3",
+                "yourAnswer": "3"
+              },
+              {
+                "question": "Which keyword is used to start a loop in Python?",
+                "options": [
+                  "do",
+                  "loop",
+                  "while",
+                  "for"
+                ],
+                "correctAnswer": "for",
+                "yourAnswer": "for"
+              },
+              {
+                "question": "How do you import the math module?",
+                "options": [
+                  "import math",
+                  "include math",
+                  "require math",
+                  "using math"
+                ],
+                "correctAnswer": "import math",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you access the first element of a list named my_list?",
+                "options": [
+                  "my_list.first()",
+                  "my_list(0)",
+                  "my_list[0]",
+                  "my_list[1]"
+                ],
+                "correctAnswer": "my_list[0]",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the output of print(type(10))?",
+                "options": [
+                  "'<'class 'str''>'",
+                  "'<'class 'int''>'",
+                  "'<'class 'float''>'",
+                  "'<'class 'bool''>'"
+                ],
+                "correctAnswer": "'<'class 'int''>'",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What data type is used to store a sequence of characters in Python?",
+                "options": [
+                  "string",
+                  "array",
+                  "text",
+                  "char"
+                ],
+                "correctAnswer": "string",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the purpose of the if __name__ == '__main__': block?",
+                "options": [
+                  "To ensure code runs only when the script is executed directly",
+                  "To define the main function",
+                  "To import modules",
+                  "To handle exceptions"
+                ],
+                "correctAnswer": "To ensure code runs only when the script is executed directly",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "Which of the following is NOT a valid Python variable name?",
+                "options": [
+                  "_var",
+                  "my_var",
+                  "VarName",
+                  "123var"
+                ],
+                "correctAnswer": "123var",
+                "yourAnswer": "Not Answered"
+              }
+            ]
+          },
+          {
+            "score": 9,
+            "questions": [
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "3.3333333333333335"
+              },
+              {
+                "question": "What is the result of True and False?",
+                "options": [
+                  "None",
+                  "False",
+                  "Error",
+                  "True"
+                ],
+                "correctAnswer": "False",
+                "yourAnswer": "False"
+              },
+              {
+                "question": "What is a tuple in Python?",
+                "options": [
+                  "An ordered, mutable sequence",
+                  "An unordered, mutable sequence",
+                  "An unordered, immutable sequence",
+                  "An ordered, immutable sequence"
+                ],
+                "correctAnswer": "An ordered, immutable sequence",
+                "yourAnswer": "An unordered, immutable sequence"
+              },
+              {
+                "question": "What method is used to add an element to a list?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "add()",
+                  "append()"
+                ],
+                "correctAnswer": "append()",
+                "yourAnswer": "append()"
+              },
+              {
+                "question": "What does the range(5) function generate?",
+                "options": [
+                  "[0, 1, 2, 3, 4, 5]",
+                  "[0, 1, 2, 3, 4]",
+                  "[1, 2, 3, 4, 5]",
+                  "[1, 2, 3, 4]"
+                ],
+                "correctAnswer": "[0, 1, 2, 3, 4]",
+                "yourAnswer": "[0, 1, 2, 3, 4]"
+              },
+              {
+                "question": "Which keyword is used to start a loop in Python?",
+                "options": [
+                  "do",
+                  "loop",
+                  "while",
+                  "for"
+                ],
+                "correctAnswer": "for",
+                "yourAnswer": "for"
+              },
+              {
+                "question": "What does str(5) return?",
+                "options": [
+                  "integer",
+                  "5",
+                  "'5'",
+                  "5.0"
+                ],
+                "correctAnswer": "'5'",
+                "yourAnswer": "'5'"
+              },
+              {
+                "question": "How do you comment a single line in Python?",
+                "options": [
+                  "// This is a comment",
+                  "/* This is a comment /",
+                  "# This is a comment",
+                  "-- This is a comment"
+                ],
+                "correctAnswer": "# This is a comment",
+                "yourAnswer": "# This is a comment"
+              },
+              {
+                "question": "What is the output of print(len([1, 2, 3]))?",
+                "options": [
+                  "3",
+                  "1",
+                  "2",
+                  "4"
+                ],
+                "correctAnswer": "3",
+                "yourAnswer": "3"
+              },
+              {
+                "question": "What keyword is used to create a dictionary in Python?",
+                "options": [
+                  "()",
+                  "[]",
+                  "dict()",
+                  "dictionary()"
+                ],
+                "correctAnswer": "dict()",
+                "yourAnswer": "dict()"
+              }
+            ]
+          }
+        ]
+      },
+      "isLoggedIn": false
     },
     {
-      "id": "6430",
-      "username": "preetham",
+      "id": "a133",
+      "username": "vijay",
       "password": "12345",
       "role": "user",
-      "score": {},
-      "isLoggedIn": true
+      "progress": {},
+      "isLoggedIn": false
     }
   ],
   "Topics": [
