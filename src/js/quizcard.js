@@ -1,6 +1,6 @@
 import QuizPage from "./quizpage.js";
 import HomePage from "./home.js";
-
+const DB_URL="http://localhost:5001/Topics";
 const quizcard = () => {
 QuizCards();
 }
@@ -12,13 +12,13 @@ let quizbutton = document.querySelector(".quiz");
 let signinbtn = document.querySelector(".signin");
 
 //Listening to home
-homebtn.addEventListener("click", () => {
+homebtn.addEventListener("click", async () => {
+  event.preventDefault();
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
   signinbtn.classList.remove("hidden");
   homebtn.classList.add("hidden");
   quizbutton.classList.add("hidden");
-
   HomePage();
 });
 //Quiz Cards
@@ -50,7 +50,7 @@ async function QuizCards() {
     "p-5",
     "place-items-center"
   );
-  let response = await fetch("./src/assets/Topics.json");
+  let response = await fetch(DB_URL);
   let data = await response.json();
   data.map((object) => {
     let card = document.createElement("div");
@@ -95,4 +95,5 @@ async function QuizCards() {
   });
 
   maincontainer.appendChild(cardContainer);
+  
 }

@@ -3,6 +3,7 @@ import QuizCards from "./quizcard.js";
 import ResultPage from "./resultpage.js";
 import HomePage from "./home.js";
 
+const DB_URL="http://localhost:5001/Topics";
 const quizpage = (val) => {
 QuizPage(val)
 }
@@ -18,6 +19,7 @@ let signinbtn = document.querySelector(".signin");
 
 //Listening home
 homebtn.addEventListener("click", () => {
+    event.preventDefault();
   maincontainer.classList.remove("flex-col");
   maincontainer.classList.add("flex-row");
   signinbtn.classList.remove("hidden");
@@ -59,7 +61,7 @@ async function QuizPage(topic) {
     quizbutton.classList.remove("hidden");
     maincontainer.classList.remove("justify-center");
     maincontainer.classList.add("justify-start");
-    let response = await fetch("./src/assets/Topics.json");
+    let response = await fetch(DB_URL);
     let data = await response.json();
     let selectedTopic = data.find((obj) => obj.topic === topic);
     Questions = selectedTopic.questions;

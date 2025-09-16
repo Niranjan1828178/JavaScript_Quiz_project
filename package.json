@@ -2,10 +2,15 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "vite": "^7.1.5"
   },
-   "scripts": {
-  "start": "npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch"
-}
+  "scripts": {
+    "dev": "vite",
+    "start": "npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch",
+    "DB": "npx json-server --watch src/assets/db.json --port 5001",
+    "start:all": "concurrently \"npm run dev\" \"npm run start\" \"npm run DB\""
+  }
 }

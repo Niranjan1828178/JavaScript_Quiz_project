@@ -1,6 +1,6 @@
 import QuizCards from "./quizcard.js";
 const home = () => {
-HomePage();
+  HomePage();
 }
 
 export default home
@@ -13,6 +13,8 @@ let maincontainer = document.querySelector(".maincontainer");
 
 //Home Page
 function HomePage() {
+  // document.querySelector(".Username").innerText = "";
+  // localStorage.clear();
   maincontainer.innerHTML = `<main
         class="h-full w-[40%] flex flex-col items-center justify-center pt-10"
       >
@@ -27,8 +29,7 @@ function HomePage() {
           Verify your programming understanding. The MCQ way to confirm your
           expertise.
         </p>
-        <a
-          href="#"
+        <a href="#"
           class="StartQuiz bg-[#A37C6A] transition duration-400  hover:bg-[#D3C5B8] text-[#F5F0EF] hover:text-stone-700 font-serif font-semibold px-1 py-1 text-sm rounded-lg mx-1 sm:px-3 sm:py-2 sm:rounded-xl sm:text-lg"
           >Start Quiz</a
         >
