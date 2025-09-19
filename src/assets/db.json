@@ -377,6 +377,121 @@
                 "yourAnswer": "Not Answered"
               }
             ]
+          },
+          {
+            "score": 10,
+            "questions": [
+              {
+                "question": "How do you access the first element of a list named my_list?",
+                "options": [
+                  "my_list.first()",
+                  "my_list(0)",
+                  "my_list[0]",
+                  "my_list[1]"
+                ],
+                "correctAnswer": "my_list[0]",
+                "yourAnswer": "my_list[0]"
+              },
+              {
+                "question": "What is the output of print(type(10))?",
+                "options": [
+                  "'<'class 'str''>'",
+                  "'<'class 'int''>'",
+                  "'<'class 'float''>'",
+                  "'<'class 'bool''>'"
+                ],
+                "correctAnswer": "'<'class 'int''>'",
+                "yourAnswer": "'<'class 'int''>'"
+              },
+              {
+                "question": "What keyword is used to create a dictionary in Python?",
+                "options": [
+                  "()",
+                  "[]",
+                  "dict()",
+                  "dictionary()"
+                ],
+                "correctAnswer": "dict()",
+                "yourAnswer": "dict()"
+              },
+              {
+                "question": "Which keyword is used to start a loop in Python?",
+                "options": [
+                  "do",
+                  "loop",
+                  "while",
+                  "for"
+                ],
+                "correctAnswer": "for",
+                "yourAnswer": "for"
+              },
+              {
+                "question": "How do you import the math module?",
+                "options": [
+                  "import math",
+                  "include math",
+                  "require math",
+                  "using math"
+                ],
+                "correctAnswer": "import math",
+                "yourAnswer": "import math"
+              },
+              {
+                "question": "What method is used to add an element to a list?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "add()",
+                  "append()"
+                ],
+                "correctAnswer": "append()",
+                "yourAnswer": "append()"
+              },
+              {
+                "question": "What is the output of print(len([1, 2, 3]))?",
+                "options": [
+                  "3",
+                  "1",
+                  "2",
+                  "4"
+                ],
+                "correctAnswer": "3",
+                "yourAnswer": "3"
+              },
+              {
+                "question": "What does str(5) return?",
+                "options": [
+                  "integer",
+                  "5",
+                  "'5'",
+                  "5.0"
+                ],
+                "correctAnswer": "'5'",
+                "yourAnswer": "'5'"
+              },
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "3.3333333333333335"
+              },
+              {
+                "question": "Which operator is used for integer division in Python?",
+                "options": [
+                  "%",
+                  "/",
+                  "//",
+                  "None of the above"
+                ],
+                "correctAnswer": "//",
+                "yourAnswer": "//"
+              }
+            ]
           }
         ]
       }

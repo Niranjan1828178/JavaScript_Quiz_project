@@ -133,6 +133,10 @@ async function QuizPage(topic) {
                     btn.classList.remove("bg-gray-600", "text-white");
                     btn.classList.add("bg-white");
                 }
+                else if(Object.keys(userAnswers).includes(String(btnindex))){
+                    btn.classList.remove("bg-gray-600", "text-white");
+                    btn.classList.add("bg-green-600");
+                }
             });
             navButton.classList.remove("bg-white");
             navButton.classList.add("bg-gray-600", "text-white");
@@ -215,7 +219,6 @@ async function QuizPage(topic) {
                 "rounded-lg",
                 "cursor-pointer",
                 "border",
-                "bg-white",
                 "pl-5"
             );
             let radio = document.createElement("div");
@@ -233,6 +236,7 @@ async function QuizPage(topic) {
             optionElement.classList.add("px-5", "py-2");
             optionElement.innerText = option;
             if (userAnswers[index] === optionIndex) {
+                optionbox.classList.remove("bg-white");
                 optionbox.classList.add("bg-green-600", "text-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
             }
@@ -249,6 +253,7 @@ async function QuizPage(topic) {
                     nav[val].classList.remove("bg-gray-600");
                     nav[val].classList.add("bg-green-600");
                 });
+                optionbox.classList.remove("bg-white");
                 optionbox.classList.add("bg-green-600", "text-white");
                 optionbox.children[0].classList.add("bg-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
