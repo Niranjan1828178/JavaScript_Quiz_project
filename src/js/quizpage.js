@@ -130,12 +130,12 @@ async function QuizPage(topic) {
                     btnindex != 10 &&
                     !Object.keys(userAnswers).includes(String(btnindex))
                 ) {
-                    btn.classList.remove("bg-gray-500", "text-white");
+                    btn.classList.remove("bg-gray-600", "text-white");
                     btn.classList.add("bg-white");
                 }
             });
             navButton.classList.remove("bg-white");
-            navButton.classList.add("bg-gray-500", "text-white");
+            navButton.classList.add("bg-gray-600", "text-white");
             loadQuestion(i);
         });
         navigationContainer.appendChild(navButton);
@@ -246,7 +246,7 @@ async function QuizPage(topic) {
                 let nav = Array.from(navigationContainer.children);
                 Object.keys(userAnswers).map((val) => {
                     nav[val].classList.remove("bg-white");
-                    nav[val].classList.remove("bg-gray-500");
+                    nav[val].classList.remove("bg-gray-600");
                     nav[val].classList.add("bg-green-600");
                 });
                 optionbox.classList.add("bg-green-600", "text-white");
