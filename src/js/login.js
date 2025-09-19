@@ -1,5 +1,5 @@
 import Signin from "./signin.js";
-import QuizCard from "./quizcard.js";
+import HomePage from "./home.js";
 const USERS_URL = "http://localhost:5001/Users";
 const login = () => {
     loginPage()
@@ -8,6 +8,8 @@ const login = () => {
 export default login;
 
 let maincontainer = document.querySelector(".maincontainer");
+
+//Login Page
 function loginPage() {
     maincontainer.innerHTML = "";
     //Login Block
@@ -53,19 +55,12 @@ function loginPage() {
     passwordinput.classList.add("Password","w-[80%]", "h-10", "focus:ring-0", "focus:outline-none", "font-serif")
     passwordbox.appendChild(passwordinput);
     loginblock.appendChild(passwordbox);
-    // //change headding
-    // headding.innerText = "Login";
-    // //remove confirmpassword box
-    // loginblock.removeChild(confirmpassword);
-    // //change button text
-    // signupbtn.classList.remove("SigninButton");
-    // signupbtn.classList.add("LoginButton");
-    // signupbtn.innerText = "Login";
+    
     //Login Button
         let loginbutton = document.createElement("button");
         loginbutton.classList.add("loginbutton","w-[50%]", "h-10", "bg-[#A37C6A]", "text-white", "font-bold", "rounded-xl", "mt-4", "hover:bg-[#8C7767]", "transition", "duration-300");
         loginbutton.innerText = "Login";
-        loginbutton.addEventListener('click', async() => {
+        loginbutton.addEventListener('click', async(event) => {
             event.preventDefault();
             Loginincheck(usernameinput.value, passwordinput.value);
         });
@@ -76,7 +71,6 @@ function loginPage() {
         linktosignup.classList.add("linktosignup","mt-4", "text-sm", "font-serif");
         linktosignup.innerHTML = `Don't have an account? <a href="#" class="linkSignup text-blue-500 underline" id="linklogin">Signup</a>`;
         linktosignup.querySelector(".linkSignup").addEventListener("click", () => {
-            localStorage.setItem("state","signin");
             Signin();
         })
         loginblock.appendChild(linktosignup);
@@ -90,16 +84,9 @@ async function Loginincheck(username, password) {
     let userExists = usersData.find((user) => user.username == username);
     if (userExists) {
         if (userExists.password == password) {
-            await fetch(USERS_URL + `/${userExists.id}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ isLoggedIn: true })
-            });
             maincontainer.innerHTML = "";
-            localStorage.setItem("state", "user");
-            QuizCard();
+            localStorage.setItem("currentuser", username);
+            HomePage();
         }
         else {
             alert("Username or Password wrong!");

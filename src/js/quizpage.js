@@ -1,7 +1,6 @@
 
 import QuizCards from "./quizcard.js";
 import ResultPage from "./resultpage.js";
-// import HomePage from "./home.js";
 
 const DB_URL = "http://localhost:5001/Topics";
 const quizpage = (val) => {
@@ -9,21 +8,12 @@ const quizpage = (val) => {
 }
 
 export default quizpage
+
 let quizbutton = document.querySelector(".quiz");
 let maincontainer = document.querySelector(".maincontainer");
 let homebtn = document.querySelector(".home");
 let signinbtn = document.querySelector(".signin");
 
-// //Listening home
-// homebtn.addEventListener("click", () => {
-//     event.preventDefault();
-//     maincontainer.classList.remove("flex-col");
-//     maincontainer.classList.add("flex-row");
-//     signinbtn.classList.remove("hidden");
-//     homebtn.classList.add("hidden");
-//     quizbutton.classList.add("hidden");
-//     HomePage();
-// });
 
 //Question Navigation section
 let navigationbox = document.createElement("div");
@@ -243,13 +233,13 @@ async function QuizPage(topic) {
             optionElement.classList.add("px-5", "py-2");
             optionElement.innerText = option;
             if (userAnswers[index] === optionIndex) {
-                optionbox.classList.add("bg-green-500", "text-white");
+                optionbox.classList.add("bg-green-600", "text-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
             }
             optionbox.addEventListener("click", () => {
                 userAnswers[index] = optionIndex;
                 Array.from(optionsContainer.children).forEach((child) => {
-                    child.classList.remove("bg-green-500", "text-white");
+                    child.classList.remove("bg-green-600", "text-white");
                     child.children[0].classList.remove("bg-white");
                     child.children[0].innerHTML = "";
                 });
@@ -257,9 +247,9 @@ async function QuizPage(topic) {
                 Object.keys(userAnswers).map((val) => {
                     nav[val].classList.remove("bg-white");
                     nav[val].classList.remove("bg-gray-500");
-                    nav[val].classList.add("bg-green-500");
+                    nav[val].classList.add("bg-green-600");
                 });
-                optionbox.classList.add("bg-green-500", "text-white");
+                optionbox.classList.add("bg-green-600", "text-white");
                 optionbox.children[0].classList.add("bg-white");
                 optionbox.children[0].innerHTML = `<i class="fa-solid fa-check text-black"></i>`;
             });

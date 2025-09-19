@@ -1,12 +1,12 @@
 import ReviewPage from "./reviewpage.js";
 const USERS_URL = "http://localhost:5001/Users";
 const resultpage = async(topic, Questions, score) => {
+
   let users = await fetch(USERS_URL)
   let userdata = await users.json();
-  let currentuser = userdata.find(user => user.isLoggedIn === true);
+  let currentuser = userdata.find(user => user.username === localStorage.getItem("currentuser"));
   console.log(currentuser);
   let scores ={...currentuser.progress};
-  // scores[topic].append({ score: score, questions: Questions });
   if (!scores[topic]) {
     scores[topic] = [];
   }
@@ -29,7 +29,6 @@ let maincontainer = document.querySelector(".maincontainer");
 
 //Result Page
 function ResultPage(topic, Questions, score) {
-  // maincontainer.innerText = score;
   maincontainer.innerHTML = "";
   let Resultsection = document.createElement("div");
   Resultsection.classList.add('w-full', 'flex', 'flex-col', 'gap-5', 'items-center', 'justify-center')

@@ -4,52 +4,18 @@
       "username": "admin",
       "password": "admin123",
       "role": "admin",
-      "isLoggedIn": false,
       "id": "ebf1"
     },
     {
-      "id": "4438",
-      "username": "niranjan",
+      "id": "b53b",
+      "username": "Niranjan",
       "password": "12345",
       "role": "user",
       "progress": {
         "python": [
           {
-            "score": 4,
+            "score": 10,
             "questions": [
-              {
-                "question": "How do you create a list in Python?",
-                "options": [
-                  "myList = ()",
-                  "myList = array()",
-                  "myList = []",
-                  "myList = {}"
-                ],
-                "correctAnswer": "myList = []",
-                "yourAnswer": "myList = []"
-              },
-              {
-                "question": "What is the purpose of the pass statement in Python?",
-                "options": [
-                  "To raise an exception",
-                  "To skip the current iteration of a loop",
-                  "To define an empty code block",
-                  "To exit a loop"
-                ],
-                "correctAnswer": "To define an empty code block",
-                "yourAnswer": "To define an empty code block"
-              },
-              {
-                "question": "What is the output of print(len([1, 2, 3]))?",
-                "options": [
-                  "3",
-                  "1",
-                  "2",
-                  "4"
-                ],
-                "correctAnswer": "3",
-                "yourAnswer": "3"
-              },
               {
                 "question": "Which keyword is used to start a loop in Python?",
                 "options": [
@@ -60,88 +26,6 @@
                 ],
                 "correctAnswer": "for",
                 "yourAnswer": "for"
-              },
-              {
-                "question": "How do you import the math module?",
-                "options": [
-                  "import math",
-                  "include math",
-                  "require math",
-                  "using math"
-                ],
-                "correctAnswer": "import math",
-                "yourAnswer": "Not Answered"
-              },
-              {
-                "question": "How do you access the first element of a list named my_list?",
-                "options": [
-                  "my_list.first()",
-                  "my_list(0)",
-                  "my_list[0]",
-                  "my_list[1]"
-                ],
-                "correctAnswer": "my_list[0]",
-                "yourAnswer": "Not Answered"
-              },
-              {
-                "question": "What is the output of print(type(10))?",
-                "options": [
-                  "'<'class 'str''>'",
-                  "'<'class 'int''>'",
-                  "'<'class 'float''>'",
-                  "'<'class 'bool''>'"
-                ],
-                "correctAnswer": "'<'class 'int''>'",
-                "yourAnswer": "Not Answered"
-              },
-              {
-                "question": "What data type is used to store a sequence of characters in Python?",
-                "options": [
-                  "string",
-                  "array",
-                  "text",
-                  "char"
-                ],
-                "correctAnswer": "string",
-                "yourAnswer": "Not Answered"
-              },
-              {
-                "question": "What is the purpose of the if __name__ == '__main__': block?",
-                "options": [
-                  "To ensure code runs only when the script is executed directly",
-                  "To define the main function",
-                  "To import modules",
-                  "To handle exceptions"
-                ],
-                "correctAnswer": "To ensure code runs only when the script is executed directly",
-                "yourAnswer": "Not Answered"
-              },
-              {
-                "question": "Which of the following is NOT a valid Python variable name?",
-                "options": [
-                  "_var",
-                  "my_var",
-                  "VarName",
-                  "123var"
-                ],
-                "correctAnswer": "123var",
-                "yourAnswer": "Not Answered"
-              }
-            ]
-          },
-          {
-            "score": 9,
-            "questions": [
-              {
-                "question": "What is the result of 10 / 3 in Python 3?",
-                "options": [
-                  "3.0",
-                  "3",
-                  "3.3333333333333335",
-                  "3.3"
-                ],
-                "correctAnswer": "3.3333333333333335",
-                "yourAnswer": "3.3333333333333335"
               },
               {
                 "question": "What is the result of True and False?",
@@ -163,18 +47,29 @@
                   "An ordered, immutable sequence"
                 ],
                 "correctAnswer": "An ordered, immutable sequence",
-                "yourAnswer": "An unordered, immutable sequence"
+                "yourAnswer": "An ordered, immutable sequence"
               },
               {
-                "question": "What method is used to add an element to a list?",
+                "question": "What is the purpose of the pass statement in Python?",
                 "options": [
-                  "insert()",
-                  "push()",
-                  "add()",
-                  "append()"
+                  "To raise an exception",
+                  "To skip the current iteration of a loop",
+                  "To define an empty code block",
+                  "To exit a loop"
                 ],
-                "correctAnswer": "append()",
-                "yourAnswer": "append()"
+                "correctAnswer": "To define an empty code block",
+                "yourAnswer": "To define an empty code block"
+              },
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "3.3333333333333335"
               },
               {
                 "question": "What does the range(5) function generate?",
@@ -188,16 +83,64 @@
                 "yourAnswer": "[0, 1, 2, 3, 4]"
               },
               {
-                "question": "Which keyword is used to start a loop in Python?",
+                "question": "Which keyword is used for function declaration in Python?",
                 "options": [
-                  "do",
-                  "loop",
-                  "while",
-                  "for"
+                  "def",
+                  "define",
+                  "func",
+                  "function"
                 ],
-                "correctAnswer": "for",
-                "yourAnswer": "for"
+                "correctAnswer": "def",
+                "yourAnswer": "def"
               },
+              {
+                "question": "What is the purpose of the if __name__ == '__main__': block?",
+                "options": [
+                  "To ensure code runs only when the script is executed directly",
+                  "To define the main function",
+                  "To import modules",
+                  "To handle exceptions"
+                ],
+                "correctAnswer": "To ensure code runs only when the script is executed directly",
+                "yourAnswer": "To ensure code runs only when the script is executed directly"
+              },
+              {
+                "question": "How do you create a list in Python?",
+                "options": [
+                  "myList = ()",
+                  "myList = array()",
+                  "myList = []",
+                  "myList = {}"
+                ],
+                "correctAnswer": "myList = []",
+                "yourAnswer": "myList = []"
+              },
+              {
+                "question": "What is the output of print(len([1, 2, 3]))?",
+                "options": [
+                  "3",
+                  "1",
+                  "2",
+                  "4"
+                ],
+                "correctAnswer": "3",
+                "yourAnswer": "3"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "29a4",
+      "username": "akash",
+      "password": "12345",
+      "role": "user",
+      "progress": {
+        "python": [
+          {
+            "score": 0,
+            "questions": [
               {
                 "question": "What does str(5) return?",
                 "options": [
@@ -207,7 +150,132 @@
                   "5.0"
                 ],
                 "correctAnswer": "'5'",
-                "yourAnswer": "'5'"
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you comment a single line in Python?",
+                "options": [
+                  "// This is a comment",
+                  "/* This is a comment /",
+                  "# This is a comment",
+                  "-- This is a comment"
+                ],
+                "correctAnswer": "# This is a comment",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "Which operator is used for integer division in Python?",
+                "options": [
+                  "%",
+                  "/",
+                  "//",
+                  "None of the above"
+                ],
+                "correctAnswer": "//",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What method is used to add an element to a list?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "add()",
+                  "append()"
+                ],
+                "correctAnswer": "append()",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you create a list in Python?",
+                "options": [
+                  "myList = ()",
+                  "myList = array()",
+                  "myList = []",
+                  "myList = {}"
+                ],
+                "correctAnswer": "myList = []",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is a tuple in Python?",
+                "options": [
+                  "An ordered, mutable sequence",
+                  "An unordered, mutable sequence",
+                  "An unordered, immutable sequence",
+                  "An ordered, immutable sequence"
+                ],
+                "correctAnswer": "An ordered, immutable sequence",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What data type is used to store a sequence of characters in Python?",
+                "options": [
+                  "string",
+                  "array",
+                  "text",
+                  "char"
+                ],
+                "correctAnswer": "string",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What keyword is used to create a dictionary in Python?",
+                "options": [
+                  "()",
+                  "[]",
+                  "dict()",
+                  "dictionary()"
+                ],
+                "correctAnswer": "dict()",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the output of print(type(10))?",
+                "options": [
+                  "'<'class 'str''>'",
+                  "'<'class 'int''>'",
+                  "'<'class 'float''>'",
+                  "'<'class 'bool''>'"
+                ],
+                "correctAnswer": "'<'class 'int''>'",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What does the range(5) function generate?",
+                "options": [
+                  "[0, 1, 2, 3, 4, 5]",
+                  "[0, 1, 2, 3, 4]",
+                  "[1, 2, 3, 4, 5]",
+                  "[1, 2, 3, 4]"
+                ],
+                "correctAnswer": "[0, 1, 2, 3, 4]",
+                "yourAnswer": "Not Answered"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "5d8b",
+      "username": "Vijay",
+      "password": "12345",
+      "role": "user",
+      "progress": {
+        "python": [
+          {
+            "score": 4,
+            "questions": [
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "3.3333333333333335"
               },
               {
                 "question": "How do you comment a single line in Python?",
@@ -221,6 +289,61 @@
                 "yourAnswer": "# This is a comment"
               },
               {
+                "question": "Which keyword is used for function declaration in Python?",
+                "options": [
+                  "def",
+                  "define",
+                  "func",
+                  "function"
+                ],
+                "correctAnswer": "def",
+                "yourAnswer": "def"
+              },
+              {
+                "question": "What is the result of True and False?",
+                "options": [
+                  "None",
+                  "False",
+                  "Error",
+                  "True"
+                ],
+                "correctAnswer": "False",
+                "yourAnswer": "False"
+              },
+              {
+                "question": "What is the output of print(type(10))?",
+                "options": [
+                  "'<'class 'str''>'",
+                  "'<'class 'int''>'",
+                  "'<'class 'float''>'",
+                  "'<'class 'bool''>'"
+                ],
+                "correctAnswer": "'<'class 'int''>'",
+                "yourAnswer": "'<'class 'float''>'"
+              },
+              {
+                "question": "Which keyword is used to start a loop in Python?",
+                "options": [
+                  "do",
+                  "loop",
+                  "while",
+                  "for"
+                ],
+                "correctAnswer": "for",
+                "yourAnswer": "while"
+              },
+              {
+                "question": "Which of the following is NOT a valid Python variable name?",
+                "options": [
+                  "_var",
+                  "my_var",
+                  "VarName",
+                  "123var"
+                ],
+                "correctAnswer": "123var",
+                "yourAnswer": "VarName"
+              },
+              {
                 "question": "What is the output of print(len([1, 2, 3]))?",
                 "options": [
                   "3",
@@ -229,32 +352,41 @@
                   "4"
                 ],
                 "correctAnswer": "3",
-                "yourAnswer": "3"
+                "yourAnswer": "Not Answered"
               },
               {
-                "question": "What keyword is used to create a dictionary in Python?",
+                "question": "How do you access the first element of a list named my_list?",
                 "options": [
-                  "()",
-                  "[]",
-                  "dict()",
-                  "dictionary()"
+                  "my_list.first()",
+                  "my_list(0)",
+                  "my_list[0]",
+                  "my_list[1]"
                 ],
-                "correctAnswer": "dict()",
-                "yourAnswer": "dict()"
+                "correctAnswer": "my_list[0]",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What data type is used to store a sequence of characters in Python?",
+                "options": [
+                  "string",
+                  "array",
+                  "text",
+                  "char"
+                ],
+                "correctAnswer": "string",
+                "yourAnswer": "Not Answered"
               }
             ]
           }
         ]
-      },
-      "isLoggedIn": false
+      }
     },
     {
-      "id": "a133",
-      "username": "vijay",
+      "id": "9c03",
+      "username": "preetham",
       "password": "12345",
       "role": "user",
-      "progress": {},
-      "isLoggedIn": false
+      "progress": {}
     }
   ],
   "Topics": [
@@ -429,7 +561,7 @@
         },
         {
           "id": 16,
-          "question": "What is the purpose of the if __name__ == '__main__': block?",
+          "question": "What is the purpose of the if name == 'main': block?",
           "options": [
             "To ensure code runs only when the script is executed directly",
             "To define the main function",
@@ -509,7 +641,7 @@
             "public static void Main(String[] args)",
             "static void main(String[] args)"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "id": 3,
@@ -535,7 +667,7 @@
         },
         {
           "id": 5,
-          "question": "What is the keyword used for inheritance in Java?",
+          "question": "Which keyword is used for inheritance in Java?",
           "options": [
             "derives",
             "inherits",
@@ -597,7 +729,7 @@
             "An abstract class",
             "A contract that classes can implement"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "id": 11,
@@ -619,7 +751,7 @@
             "Class",
             "Parent"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "id": 13,
@@ -663,7 +795,7 @@
             "A linked list",
             "A fixed-size array"
           ],
-          "answer": 3
+          "answer": 1
         },
         {
           "id": 17,
@@ -674,7 +806,7 @@
             "readonly",
             "final"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "id": 18,
@@ -725,7 +857,7 @@
             ".java",
             ".py"
           ],
-          "answer": 3
+          "answer": 1
         },
         {
           "id": 2,
@@ -747,7 +879,7 @@
             "float",
             "double"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "id": 4,
@@ -758,7 +890,7 @@
             "// This is a comment",
             "<!-- This is a comment -->"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "id": 5,
@@ -769,7 +901,7 @@
             "_main",
             "main"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "id": 6,
@@ -791,7 +923,7 @@
             "To include header files",
             "To link libraries"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "id": 8,
@@ -802,7 +934,7 @@
             "for",
             "while"
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": 9,
@@ -813,7 +945,7 @@
             "malloc",
             "realloc"
           ],
-          "answer": 3
+          "answer": 1
         },
         {
           "id": 10,
@@ -835,7 +967,7 @@
             "4 bytes",
             "1 byte"
           ],
-          "answer": 1
+          "answer": 3
         },
         {
           "id": 12,
@@ -846,7 +978,7 @@
             "A linked list",
             "A file format"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "id": 13,
@@ -868,7 +1000,7 @@
             "The number of elements in an array",
             "The address of a variable"
           ],
-          "answer": 3
+          "answer": 1
         },
         {
           "id": 15,
@@ -879,7 +1011,7 @@
             "A built-in data type",
             "A dynamic memory allocation technique"
           ],
-          "answer": 3
+          "answer": 1
         },
         {
           "id": 16,
@@ -890,7 +1022,7 @@
             "#ifdef",
             "#ifndef"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "id": 17,
@@ -912,7 +1044,7 @@
             "A loop that runs indefinitely",
             "A preprocessor directive"
           ],
-          "answer": 3
+          "answer": 0
         },
         {
           "id": 19,
@@ -923,7 +1055,7 @@
             "All of the above",
             "Indicates that a variable's value cannot be changed after initialization"
           ],
-          "answer": 1
+          "answer": 3
         },
         {
           "id": 20,
@@ -934,7 +1066,7 @@
             "To cast data types",
             "To define new data types"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "id": "9064"
@@ -952,7 +1084,7 @@
             "Web Browsers",
             "Operating Systems"
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": 2,
@@ -985,7 +1117,7 @@
             "/* This is a comment /",
             "// This is a comment"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "id": 5,
@@ -1007,7 +1139,7 @@
             "append()",
             "concat()"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "id": 7,
@@ -1029,7 +1161,7 @@
             "while",
             "do...while"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "id": 9,
@@ -1040,7 +1172,7 @@
             "101",
             "11"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "id": 10,
@@ -1062,7 +1194,7 @@
             "Validates a JSON string",
             "Formats a JSON string"
           ],
-          "answer": 3
+          "answer": 0
         },
         {
           "id": 12,
@@ -1073,7 +1205,7 @@
             "pop()",
             "delete()"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "id": 13,
@@ -1084,7 +1216,7 @@
             "Null and None",
             "No Assignment Necessary"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "id": 14,
@@ -1095,7 +1227,7 @@
             "==",
             "==="
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "id": 15,
@@ -1117,7 +1249,7 @@
             "exit",
             "break"
           ],
-          "answer": 1
+          "answer": 3
         },
         {
           "id": 17,
@@ -1128,7 +1260,7 @@
             "A function that calls itself",
             "A function that returns another function"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "id": 18,
@@ -1139,7 +1271,7 @@
             "Refers to the global object",
             "Refers to the parent object"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "id": 19,
@@ -1150,7 +1282,7 @@
             "Asynchronous JavaScript and XML",
             "Asymmetrical JavaScript and XML"
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": 20,
@@ -1161,7 +1293,7 @@
             "A function that has access to variables from its surrounding scope, even after the outer function has returned",
             "A self-executing function"
           ],
-          "answer": 3
+          "answer": 2
         }
       ],
       "id": "7ea5"
@@ -1179,7 +1311,7 @@
             "EXTRACT",
             "SELECT"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "id": 2,
@@ -1201,7 +1333,7 @@
             "REMOVE",
             "DROP"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "id": 4,
@@ -1212,7 +1344,7 @@
             "APPEND",
             "INSERT"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "id": 5,
@@ -1234,7 +1366,7 @@
             "CONDITION",
             "FILTER"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "id": 7,
@@ -1267,7 +1399,7 @@
             "SELECT ALL",
             "ALL"
           ],
-          "answer": 1
+          "answer": 3
         },
         {
           "id": 10,
@@ -1278,7 +1410,7 @@
             "DEFINE TABLE",
             "NEW TABLE"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "id": 11,
@@ -1289,7 +1421,7 @@
             "A column or set of columns that uniquely identifies each row in a table",
             "A key that opens the database"
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": 12,
@@ -1333,7 +1465,7 @@
             "AVG",
             "MEAN"
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": 16,
@@ -1366,7 +1498,7 @@
             "AGGREGATE",
             "GROUP BY"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "id": 19,
@@ -1377,7 +1509,7 @@
             "CONDITION",
             "HAVING"
           ],
-          "answer": 1
+          "answer": 3
         },
         {
           "id": 20,
@@ -1388,7 +1520,7 @@
             "Data Definition Language",
             "Data Derivation Language"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "id": "98dc"
@@ -1476,7 +1608,7 @@
         },
         {
           "id": 8,
-          "question": "What does the `<!DOCTYPE html>` declaration do?",
+          "question": "What does the <!DOCTYPE html> declaration do?",
           "options": [
             "Defines a comment",
             "Declares the document type and version of HTML",
@@ -1498,7 +1630,7 @@
         },
         {
           "id": 10,
-          "question": "What is the purpose of the `alt` attribute in an `<img>` tag?",
+          "question": "What is the purpose of the alt attribute in an <img> tag?",
           "options": [
             "To specify the alignment of the image",
             "To provide alternative text for the image if it cannot be displayed",
@@ -1545,7 +1677,7 @@
           "question": "What is the correct way to write an HTML comment?",
           "options": [
             "// This is a comment",
-            "/* This is a comment */",
+            "/ This is a comment */",
             "<!-- This is a comment -->",
             "<!-- This is a comment"
           ],
@@ -1575,7 +1707,7 @@
         },
         {
           "id": 17,
-          "question": "What is the purpose of the `<head>` element in HTML?",
+          "question": "What is the purpose of the <head> element in HTML?",
           "options": [
             "To display the main content of the page",
             "To contain meta-information about the HTML document",
@@ -1648,7 +1780,7 @@
         },
         {
           "id": 3,
-          "question": "What is the default display value for a `<div>` element?",
+          "question": "What is the default display value for a <div> element?",
           "options": [
             "inline",
             "inline-block",
@@ -1686,7 +1818,7 @@
             ".idname",
             "#idname",
             "idname",
-            "*idname"
+            "idname"
           ],
           "answer": 1
         },
@@ -1714,10 +1846,10 @@
         },
         {
           "id": 9,
-          "question": "What is the correct CSS syntax for selecting all `p` elements?",
+          "question": "What is the correct CSS syntax for selecting all p elements?",
           "options": [
             "p { }",
-            "*.p { }",
+            ".p { }",
             "p. { }",
             "p: { }"
           ],
@@ -1736,7 +1868,7 @@
         },
         {
           "id": 11,
-          "question": "What does the `!important` rule do in CSS?",
+          "question": "What does the !important rule do in CSS?",
           "options": [
             "It makes the style less important",
             "It makes the style override other styles",
@@ -1802,7 +1934,7 @@
         },
         {
           "id": 17,
-          "question": "What is the default display value for a `<span>` element?",
+          "question": "What is the default display value for a <span> element?",
           "options": [
             "inline",
             "inline-block",
@@ -1875,7 +2007,7 @@
         },
         {
           "id": 3,
-          "question": "What is the purpose of `git add`?",
+          "question": "What is the purpose of git add?",
           "options": [
             "To create a new branch",
             "To stage changes for the next commit",
@@ -1897,7 +2029,7 @@
         },
         {
           "id": 5,
-          "question": "What does `git status` do?",
+          "question": "What does git status do?",
           "options": [
             "Shows the commit history",
             "Shows the list of remote repositories",
@@ -1919,7 +2051,7 @@
         },
         {
           "id": 7,
-          "question": "What is the purpose of `git push`?",
+          "question": "What is the purpose of git push?",
           "options": [
             "To download changes from a remote repository",
             "To upload local commits to a remote repository",
@@ -1941,7 +2073,7 @@
         },
         {
           "id": 9,
-          "question": "What does `git log` display?",
+          "question": "What does git log display?",
           "options": [
             "The current status of the working directory",
             "The commit history",
@@ -1974,12 +2106,12 @@
         },
         {
           "id": 12,
-          "question": "What is the difference between `git fetch` and `git pull`?",
+          "question": "What is the difference between git fetch and git pull?",
           "options": [
-            "`git fetch` downloads commits, `git pull` downloads and merges",
-            "`git pull` downloads commits, `git fetch` downloads and merges",
+            "git fetch downloads commits, git pull downloads and merges",
+            "git pull downloads commits, git fetch downloads and merges",
             "They are the same command",
-            "`git fetch` only works on local branches"
+            "git fetch only works on local branches"
           ],
           "answer": 0
         },
@@ -1996,7 +2128,7 @@
         },
         {
           "id": 14,
-          "question": "What does `git clone` do?",
+          "question": "What does git clone do?",
           "options": [
             "Creates a new repository locally",
             "Copies an existing remote repository to your local machine",
@@ -2062,7 +2194,7 @@
         },
         {
           "id": 20,
-          "question": "What is the purpose of a `.gitignore` file?",
+          "question": "What is the purpose of a .gitignore file?",
           "options": [
             "To specify which files to track",
             "To specify which files to ignore (not track) in Git",
@@ -2146,7 +2278,7 @@
         },
         {
           "id": 7,
-          "question": "What does the `docker ps` command do?",
+          "question": "What does the docker ps command do?",
           "options": [
             "Lists all Docker images",
             "Lists all running Docker containers",
@@ -2179,7 +2311,7 @@
         },
         {
           "id": 10,
-          "question": "What does the `docker stop` command do?",
+          "question": "What does the docker stop command do?",
           "options": [
             "Removes a Docker container",
             "Starts a stopped Docker container",
@@ -2223,7 +2355,7 @@
         },
         {
           "id": 14,
-          "question": "What does the `docker exec` command do?",
+          "question": "What does the docker exec command do?",
           "options": [
             "Starts a new container",
             "Stops a running container",
@@ -2245,7 +2377,7 @@
         },
         {
           "id": 16,
-          "question": "What is the purpose of the `EXPOSE` instruction in a Dockerfile?",
+          "question": "What is the purpose of the EXPOSE instruction in a Dockerfile?",
           "options": [
             "To specify which files to copy into the image",
             "To inform Docker that the container listens on the specified network ports at runtime",
@@ -2267,7 +2399,7 @@
         },
         {
           "id": 18,
-          "question": "What does `docker logs` do?",
+          "question": "What does docker logs do?",
           "options": [
             "Lists running containers",
             "Shows information about Docker networks",
@@ -2289,7 +2421,7 @@
         },
         {
           "id": 20,
-          "question": "What does the `docker push` command do?",
+          "question": "What does the docker push command do?",
           "options": [
             "Downloads an image from a registry",
             "Uploads a local image to a registry",

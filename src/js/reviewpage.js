@@ -7,15 +7,15 @@ export default reviewpage
 
 
 let maincontainer = document.querySelector(".maincontainer");
-//Review Page
+let progressbtn=document.querySelector(".progress");
 
+//Review Page
 function ReviewPage(topic, Questions) {
 
-    console.log(topic);
-    console.log(Questions);
     maincontainer.innerHTML='';
+    progressbtn.classList.remove("hidden");
     let reviewSection=document.createElement("div");
-    reviewSection.classList.add('flex','flex-col','gap-5','w-full','px-5','pb-10');
+    reviewSection.classList.add('flex','flex-col','gap-5','w-full','px-5','pb-10','ml-20');
     let reviewheadding=document.createElement("h1");
     reviewheadding.classList.add('text-3xl','font-bold','capitalize','font-serif','tracking-[5px]','mt-5');
     reviewheadding.innerText=`${topic}:`

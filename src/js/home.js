@@ -7,19 +7,22 @@ const home = (loggedin) => {
 
 export default home
 
-let logoutbtn = document.querySelector(".logout");
-let homebtn = document.querySelector(".home");
-let startquizbtn = document.querySelector(".StartQuiz");
-let signinbtn = document.querySelector(".signin");
-let maincontainer = document.querySelector(".maincontainer");
-
+let topicsbtn = document.querySelector(".quiz");
+let progressbtn=document.querySelector(".progress");
 
 //Home Page
-function HomePage(loggedin) {
-  if (loggedin) {
+function HomePage() {
+  if (localStorage.getItem("currentuser")) {
+    let homebtn = document.querySelector(".home");
+    let signinbtn = document.querySelector(".signin");
+    let logoutbtn = document.querySelector(".logout");
+    let maincontainer = document.querySelector(".maincontainer");
+    topicsbtn.classList.add("hidden");
+    progressbtn.classList.remove("hidden");
     maincontainer.innerHTML = `<main
-        class="h-full w-[40%] flex flex-col items-center mt-24 justify-center pt-10"
+        class="h-full w-[40%] flex flex-col items-center mt-40 justify-center pt-10 "
       >
+      <h1 class="capitalize text-[#420803] text-3xl sm:text-8xl tracking-wide font-serif font-extrabold mb-5">${localStorage.getItem("currentuser")}.</h1>
         <h1
           class="text-[#6B4F44] text-2xl sm:text-7xl text-center font-serif font-extrabold sm:mb-10"
         >
@@ -43,23 +46,25 @@ function HomePage(loggedin) {
           class="w-full h-full object-contain"
         />
       </article>`;
+    maincontainer.classList.add("flex-row");
+    maincontainer.classList.remove("flex-col");
+    signinbtn.classList.add("hidden");
+    logoutbtn.classList.remove("hidden");
+    homebtn.classList.add("hidden");
 
-    startquizbtn = document.querySelector(".StartQuiz");
     //Listening To QuizButton
-    startquizbtn.addEventListener("click", () => {
+    document.querySelector(".StartQuiz").addEventListener("click", () => {
       maincontainer.innerHTML = "";
       homebtn.classList.remove("hidden");
-      homebtn.classList.add("flex");
-      signinbtn.classList.add("hidden");
-      signinbtn.classList.remove("flex");
-      // logoutbtn.classList.remove("hidden");
-      // logoutbtn.classList.add("flex");
-      console.log("Quiz Started");
-      localStorage.setItem("state", "user");
       QuizCards();
     });
   }
   else {
+    let signinbtn = document.querySelector(".signin");
+    let homebtn = document.querySelector(".home");
+    let maincontainer = document.querySelector(".maincontainer");
+    topicsbtn.classList.add("hidden");
+    progressbtn.classList.add("hidden");
     maincontainer.innerHTML = `<main
         class="h-full w-[40%] flex flex-col items-center mt-24 justify-center pt-10"
       >
@@ -86,14 +91,18 @@ function HomePage(loggedin) {
           class="w-full h-full object-contain"
         />
       </article>`;
+      maincontainer.classList.add("flex-row");
+    maincontainer.classList.remove("flex-col");
     let signupbtn = document.querySelector(".signup");
+    homebtn.classList.add("hidden");
+    // homebtn.classList.add("flex");
+    // signinbtn.classList.remove("flex");
+    signinbtn.classList.add("hidden");
+    
     //Listening To SigninButton
     signupbtn.addEventListener("click", () => {
       maincontainer.innerHTML = "";
-      homebtn.classList.remove("hidden");
-      homebtn.classList.add("flex");
-      signinbtn.classList.add("hidden");
-      localStorage.setItem("state", "signin");
+      // localStorage.setItem("state", "signin");
       Signin();
     });
   }

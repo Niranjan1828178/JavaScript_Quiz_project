@@ -8,26 +8,20 @@ const signup = () => {
 
 export default signup
 let homebtn = document.querySelector(".home");
-let signupbtn=document.querySelector(".signin");
-let logout=document.querySelector(".logout");
-homebtn.addEventListener('click',()=>{
+let signupbtn = document.querySelector(".signin");
+let logout = document.querySelector(".logout");
+
+//Listening to home
+homebtn.addEventListener('click', () => {
     homebtn.classList.add('hidden')
     signupbtn.classList.remove('hidden')
-    signupbtn.classList.add('flex')
-    logout.classList.remove('flex')
     logout.classList.add('hidden')
-    if(localStorage.getItem("state")!="user" )
-        {HomePage(false);}
-    else{
-        HomePage(true);
-    }
+        HomePage();
 })
 function SigninPage() {
-    signupbtn.classList.remove('flex')
     signupbtn.classList.add('hidden')
     homebtn.classList.remove('hidden')
     logout.classList.add('hidden')
-    logout.classList.remove('flex')
     let maincontainer = document.querySelector(".maincontainer");
     maincontainer.innerHTML = "";
     maincontainer.classList.remove("justify-start");
@@ -99,8 +93,8 @@ function SigninPage() {
     signinbutton.classList.add("SigninButton", "w-[50%]", "h-10", "bg-[#A37C6A]", "text-white", "font-bold", "rounded-xl", "mt-4", "hover:bg-[#8C7767]", "transition", "duration-300");
     signinbutton.innerText = "SignUp";
     signinbutton.classList.remove("LoginButton")
-    signinbutton.addEventListener('click', () => {
-        
+    signinbutton.addEventListener('click', (event) => {
+        event.preventDefault();
         Register(usernameinput.value, passwordinput.value, confirmpasswordinput.value);
     });
     signinblock.appendChild(signinbutton);
@@ -109,8 +103,8 @@ function SigninPage() {
     let linktologin = document.createElement("div");
     linktologin.classList.add("LinkToLogin", "mt-4", "text-sm", "font-serif");
     linktologin.innerHTML = `Already have an account? <a href="#" class="linklogin text-blue-500 underline" id="linklogin">Login</a>`;
-    linktologin.querySelector(".linklogin").addEventListener("click", () => {
-        localStorage.setItem("state","login");
+    linktologin.querySelector(".linklogin").addEventListener("click", (event) => {
+        event.preventDefault();
         Login();
     })
     signinblock.appendChild(linktologin);
@@ -134,7 +128,6 @@ async function Register(username, password, confirmpassword) {
         return;
     }
     let isuser = usersData.find((user) => user.username == username);
-    // console.log(isuser);
     if (isuser) {
         alert("Username already exists");
         SigninPage();
@@ -145,9 +138,8 @@ async function Register(username, password, confirmpassword) {
             username: username,
             password: password,
             role: "user",
-            progress: {},
-            isLoggedIn: false
-        };
+            progress: {}
+        }
         await fetch(USERS_URL, {
             method: "POST",
             headers: {
@@ -155,9 +147,7 @@ async function Register(username, password, confirmpassword) {
             },
             body: JSON.stringify(newUser)
         });
-        // console.log("going to login page");
-        localStorage.setItem("state","login");
         Login();
-        
+
     }
 }

@@ -1,5 +1,6 @@
 import QuizPage from "./quizpage.js";
 import HomePage from "./home.js";
+import ProgressPage from "./progress.js";
 const DB_URL="http://localhost:5001/Topics";
 const quizcard = () => {
 QuizCards();
@@ -8,29 +9,24 @@ QuizCards();
 export default quizcard
 let maincontainer = document.querySelector(".maincontainer");
 let homebtn = document.querySelector(".home");
-let quizbutton = document.querySelector(".quiz");
 let signinbtn = document.querySelector(".signin");
 let logoutbtn = document.querySelector(".logout");
-//Listening to home
-homebtn.addEventListener("click", () => {
-  event.preventDefault();
-  maincontainer.classList.remove("flex-col");
-  maincontainer.classList.add("flex-row");
-  signinbtn.classList.remove("hidden");
-  homebtn.classList.add("hidden");
-  quizbutton.classList.add("hidden");
-  logoutbtn.classList.remove("hidden");
-  logoutbtn.classList.add("flex");
-  if(localStorage.getItem=="user"){HomePage(true);}
-  else{HomePage(false);}
+let progressbtn=document.querySelector(".progress");
+
+//calling Progeress
+progressbtn.addEventListener("click",()=>{
+  progressbtn.classList.add("hidden");
+ProgressPage();
 });
 
-logoutbtn.addEventListener("click", () => {
+//Logout Functionality
+logoutbtn.addEventListener("click", (event) => {
   event.preventDefault();
-  localStorage.setItem("state","index");
+  localStorage.removeItem("currentuser");
+  homebtn.classList.add("hidden");
   logoutbtn.classList.remove("flex");
   logoutbtn.classList.add("hidden");
-  HomePage(false);
+  HomePage();
 });
 
 //Quiz Cards
@@ -72,7 +68,7 @@ async function QuizCards() {
       "bg-white",
       "rounded-lg",
       "shadow-md",
-      "hover:shadow-xl",
+      "hover:shadow-2xl",
       "transition-shadow",
       "duration-300",
       "flex",
