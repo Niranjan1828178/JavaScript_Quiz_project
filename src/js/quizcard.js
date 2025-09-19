@@ -36,6 +36,7 @@ async function QuizCards() {
   signinbtn.classList.add("hidden");
   maincontainer.classList.remove("flex-row");
   maincontainer.classList.add("flex-col");
+  progressbtn.classList.remove("hidden");
   let QuizHeading = document.createElement("h1");
   QuizHeading.innerText = "Available Topics:";
   QuizHeading.classList.add(

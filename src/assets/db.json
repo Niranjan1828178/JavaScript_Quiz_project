@@ -502,6 +502,131 @@
       "password": "12345",
       "role": "user",
       "progress": {}
+    },
+    {
+      "id": "0075",
+      "username": "Prashanth",
+      "password": "12345",
+      "role": "user",
+      "progress": {
+        "javascript": [
+          {
+            "score": 10,
+            "questions": [
+              {
+                "question": "What is the purpose of the this keyword?",
+                "options": [
+                  "Refers to the current object",
+                  "Refers to a newly created object",
+                  "Refers to the global object",
+                  "Refers to the parent object"
+                ],
+                "correctAnswer": "Refers to the current object",
+                "yourAnswer": "Refers to the current object"
+              },
+              {
+                "question": "Which loop is best for iterating over the properties of an object?",
+                "options": [
+                  "for...in",
+                  "for",
+                  "while",
+                  "do...while"
+                ],
+                "correctAnswer": "for...in",
+                "yourAnswer": "for...in"
+              },
+              {
+                "question": "Which operator is used for strict equality comparison?",
+                "options": [
+                  "=",
+                  "equals()",
+                  "==",
+                  "==="
+                ],
+                "correctAnswer": "===",
+                "yourAnswer": "==="
+              },
+              {
+                "question": "Which method removes the last element from an array and returns it?",
+                "options": [
+                  "remove()",
+                  "shift()",
+                  "pop()",
+                  "delete()"
+                ],
+                "correctAnswer": "pop()",
+                "yourAnswer": "pop()"
+              },
+              {
+                "question": "Which keyword is used to declare a variable in JavaScript?",
+                "options": [
+                  "const",
+                  "let",
+                  "All of the above",
+                  "var"
+                ],
+                "correctAnswer": "All of the above",
+                "yourAnswer": "All of the above"
+              },
+              {
+                "question": "What does '10' + 1 evaluate to?",
+                "options": [
+                  "'11'",
+                  "'101'",
+                  "101",
+                  "11"
+                ],
+                "correctAnswer": "'101'",
+                "yourAnswer": "'101'"
+              },
+              {
+                "question": "Which built-in method adds an element to the end of an array?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "append()",
+                  "concat()"
+                ],
+                "correctAnswer": "push()",
+                "yourAnswer": "push()"
+              },
+              {
+                "question": "What is the result of typeof 'hello'?",
+                "options": [
+                  "str",
+                  "text",
+                  "character",
+                  "string"
+                ],
+                "correctAnswer": "string",
+                "yourAnswer": "string"
+              },
+              {
+                "question": "What does NaN stand for?",
+                "options": [
+                  "Not a Number",
+                  "Negative Number",
+                  "Null and None",
+                  "No Assignment Necessary"
+                ],
+                "correctAnswer": "Not a Number",
+                "yourAnswer": "Not a Number"
+              },
+              {
+                "question": "What is a closure in JavaScript?",
+                "options": [
+                  "A built-in JavaScript function",
+                  "A function that accepts another function as an argument",
+                  "A function that has access to variables from its surrounding scope, even after the outer function has returned",
+                  "A self-executing function"
+                ],
+                "correctAnswer": "A function that has access to variables from its surrounding scope, even after the outer function has returned",
+                "yourAnswer": "A function that has access to variables from its surrounding scope, even after the outer function has returned"
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "Topics": [
