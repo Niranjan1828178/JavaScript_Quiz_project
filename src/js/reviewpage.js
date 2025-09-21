@@ -15,11 +15,14 @@ function ReviewPage(topic, Questions) {
     maincontainer.innerHTML='';
     progressbtn.classList.remove("hidden");
     let reviewSection=document.createElement("div");
-    reviewSection.classList.add('flex','flex-col','gap-5','w-full','px-5','pb-10','ml-20');
+    reviewSection.classList.add('flex','flex-col','gap-5','w-full','px-5','pb-10','ml-20','h-[90vh]');
     let reviewheadding=document.createElement("h1");
     reviewheadding.classList.add('text-3xl','font-bold','capitalize','font-serif','tracking-[5px]','mt-5');
     reviewheadding.innerText=`${topic}:`
     reviewSection.appendChild(reviewheadding);
+    let questionsontainer=document.createElement("div");
+    questionsontainer.classList.add('flex','flex-col','gap-5','w-full','h-[80vh]','overflow-y-scroll','pr-5','pl-10');
+    reviewSection.appendChild(questionsontainer);
     Questions.map((question,index)=>{
         let questionSection=document.createElement("div");
         questionSection.classList.add('flex','flex-col','gap-2','w-[65%]','p-3','bg-gray-100','rounded-lg','shadow-md');
@@ -32,10 +35,11 @@ function ReviewPage(topic, Questions) {
         questionSection.appendChild(answersection);
         let optionblock=document.createElement("div");
         optionblock.classList.add('flex','flex-col','gap-2');
-        question.options.map((option)=>{
+        let naminglabel=['A','B','C','D'];
+        question.options.map((option,index)=>{
             let optionlabel=document.createElement("p");
             optionlabel.classList.add('text-md','font-medium','w-[55%]','px-3','py-1','border','border-gray-300','rounded');
-            optionlabel.innerText=option;
+            optionlabel.innerText=`${naminglabel[index]}] ${option}`;
             if(question.yourAnswer=="Not Answered" && option===question.correctAnswer){
                 optionlabel.classList.add('bg-gray-500','text-white','px-2','py-1','rounded');
             }
@@ -52,7 +56,7 @@ function ReviewPage(topic, Questions) {
         scoredvalue.classList.add(`${question.yourAnswer===question.correctAnswer?'text-green-600':'text-red-700'}`,'text-lg','font-semibold','text-center','w-28','bg-gray-200','rounded-md');
         scoredvalue.innerHTML=`Scored:${question.yourAnswer===question.correctAnswer?'+1':'+0'}`;
         answersection.appendChild(scoredvalue);
-        reviewSection.appendChild(questionSection);
+        questionsontainer.appendChild(questionSection);
     })
     maincontainer.appendChild(reviewSection);
 

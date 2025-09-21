@@ -12,5 +12,8 @@
     "start": "npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch",
     "DB": "npx json-server --watch src/assets/db.json --port 5001",
     "start:all": "concurrently \"npm run start\" \"npm run DB\" \"npm run dev\" "
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }

@@ -48,7 +48,7 @@ async function ProgressPage() {
     let progressList = document.createElement("div");
     progressList.classList.add("w-[70%]", "h-[600px]", "flex", "flex-col", "items-start", "mt-5", "space-y-4", "overflow-y-auto", "mb-5", "pb-5", "bg-gray-100", "p-4","pt-0", "rounded-lg");
     progressList.appendChild(progresslisttilte);
-    if (Object.keys(userdata.progress)>0) {
+    if (Object.keys(userdata.progress).length>0) {
         Object.keys(userdata.progress).forEach(topic => {
             userdata.progress[topic].map((t) => {
                     let topicDiv = document.createElement("div");

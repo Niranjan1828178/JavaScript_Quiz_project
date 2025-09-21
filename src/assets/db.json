@@ -127,6 +127,236 @@
                 "yourAnswer": "3"
               }
             ]
+          },
+          {
+            "score": 0,
+            "questions": [
+              {
+                "question": "Which of the following is NOT a valid Python variable name?",
+                "options": [
+                  "_var",
+                  "my_var",
+                  "VarName",
+                  "123var"
+                ],
+                "correctAnswer": "123var",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What method is used to add an element to a list?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "add()",
+                  "append()"
+                ],
+                "correctAnswer": "append()",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you comment a single line in Python?",
+                "options": [
+                  "// This is a comment",
+                  "/* This is a comment /",
+                  "# This is a comment",
+                  "-- This is a comment"
+                ],
+                "correctAnswer": "# This is a comment",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the purpose of the if name == 'main': block?",
+                "options": [
+                  "To ensure code runs only when the script is executed directly",
+                  "To define the main function",
+                  "To import modules",
+                  "To handle exceptions"
+                ],
+                "correctAnswer": "To ensure code runs only when the script is executed directly",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the purpose of the pass statement in Python?",
+                "options": [
+                  "To raise an exception",
+                  "To skip the current iteration of a loop",
+                  "To define an empty code block",
+                  "To exit a loop"
+                ],
+                "correctAnswer": "To define an empty code block",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "Which operator is used for integer division in Python?",
+                "options": [
+                  "%",
+                  "/",
+                  "//",
+                  "None of the above"
+                ],
+                "correctAnswer": "//",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What does the range(5) function generate?",
+                "options": [
+                  "[0, 1, 2, 3, 4, 5]",
+                  "[0, 1, 2, 3, 4]",
+                  "[1, 2, 3, 4, 5]",
+                  "[1, 2, 3, 4]"
+                ],
+                "correctAnswer": "[0, 1, 2, 3, 4]",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the result of True and False?",
+                "options": [
+                  "None",
+                  "False",
+                  "Error",
+                  "True"
+                ],
+                "correctAnswer": "False",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you access the first element of a list named my_list?",
+                "options": [
+                  "my_list.first()",
+                  "my_list(0)",
+                  "my_list[0]",
+                  "my_list[1]"
+                ],
+                "correctAnswer": "my_list[0]",
+                "yourAnswer": "Not Answered"
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "questions": [
+              {
+                "question": "What is the result of 10 / 3 in Python 3?",
+                "options": [
+                  "3.0",
+                  "3",
+                  "3.3333333333333335",
+                  "3.3"
+                ],
+                "correctAnswer": "3.3333333333333335",
+                "yourAnswer": "3.3333333333333335"
+              },
+              {
+                "question": "Which of the following is NOT a valid Python variable name?",
+                "options": [
+                  "_var",
+                  "my_var",
+                  "VarName",
+                  "123var"
+                ],
+                "correctAnswer": "123var",
+                "yourAnswer": "VarName"
+              },
+              {
+                "question": "How do you comment a single line in Python?",
+                "options": [
+                  "// This is a comment",
+                  "/* This is a comment /",
+                  "# This is a comment",
+                  "-- This is a comment"
+                ],
+                "correctAnswer": "# This is a comment",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "Which keyword is used to start a loop in Python?",
+                "options": [
+                  "do",
+                  "loop",
+                  "while",
+                  "for"
+                ],
+                "correctAnswer": "for",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What is the result of True and False?",
+                "options": [
+                  "None",
+                  "False",
+                  "Error",
+                  "True"
+                ],
+                "correctAnswer": "False",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What keyword is used to create a dictionary in Python?",
+                "options": [
+                  "()",
+                  "[]",
+                  "dict()",
+                  "dictionary()"
+                ],
+                "correctAnswer": "dict()",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "Which keyword is used for function declaration in Python?",
+                "options": [
+                  "def",
+                  "define",
+                  "func",
+                  "function"
+                ],
+                "correctAnswer": "def",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you create a list in Python?",
+                "options": [
+                  "myList = ()",
+                  "myList = array()",
+                  "myList = []",
+                  "myList = {}"
+                ],
+                "correctAnswer": "myList = []",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "What method is used to add an element to a list?",
+                "options": [
+                  "insert()",
+                  "push()",
+                  "add()",
+                  "append()"
+                ],
+                "correctAnswer": "append()",
+                "yourAnswer": "Not Answered"
+              },
+              {
+                "question": "How do you access the first element of a list named my_list?",
+                "options": [
+                  "my_list.first()",
+                  "my_list(0)",
+                  "my_list[0]",
+                  "my_list[1]"
+                ],
+                "correctAnswer": "my_list[0]",
+                "yourAnswer": "Not Answered"
+              }
+            ]
           }
         ]
       }
@@ -622,6 +852,138 @@
                 ],
                 "correctAnswer": "A function that has access to variables from its surrounding scope, even after the outer function has returned",
                 "yourAnswer": "A function that has access to variables from its surrounding scope, even after the outer function has returned"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "49dd",
+      "username": "dev",
+      "password": "12345",
+      "role": "user",
+      "progress": {}
+    },
+    {
+      "id": "b644",
+      "username": "p",
+      "password": "1234",
+      "role": "user",
+      "progress": {
+        "java": [
+          {
+            "score": 7,
+            "questions": [
+              {
+                "question": "Which keyword is used for inheritance in Java?",
+                "options": [
+                  "derives",
+                  "inherits",
+                  "extends",
+                  "implements"
+                ],
+                "correctAnswer": "extends",
+                "yourAnswer": "extends"
+              },
+              {
+                "question": "What is the access modifier that makes a member accessible only within the same class?",
+                "options": [
+                  "protected",
+                  "public",
+                  "private",
+                  "default"
+                ],
+                "correctAnswer": "private",
+                "yourAnswer": "private"
+              },
+              {
+                "question": "Which keyword is used to handle exceptions?",
+                "options": [
+                  "try-except",
+                  "try-catch",
+                  "handle",
+                  "throw-catch"
+                ],
+                "correctAnswer": "try-catch",
+                "yourAnswer": "try-catch"
+              },
+              {
+                "question": "Which keyword is used to declare a class in Java?",
+                "options": [
+                  "class",
+                  "def",
+                  "struct",
+                  "object"
+                ],
+                "correctAnswer": "class",
+                "yourAnswer": "class"
+              },
+              {
+                "question": "What is a constructor in Java?",
+                "options": [
+                  "A method that is called when an object is destroyed",
+                  "A static method",
+                  "A method that returns a new object",
+                  "A special method used to initialize objects"
+                ],
+                "correctAnswer": "A special method used to initialize objects",
+                "yourAnswer": "A special method used to initialize objects"
+              },
+              {
+                "question": "Which keyword is used to create a constant variable?",
+                "options": [
+                  "const",
+                  "static",
+                  "readonly",
+                  "final"
+                ],
+                "correctAnswer": "final",
+                "yourAnswer": "const"
+              },
+              {
+                "question": "What is the data type of the result of a comparison operation (e.g., x > y)?",
+                "options": [
+                  "boolean",
+                  "int",
+                  "float",
+                  "String"
+                ],
+                "correctAnswer": "boolean",
+                "yourAnswer": "boolean"
+              },
+              {
+                "question": "What is the keyword used to prevent a method from being overridden?",
+                "options": [
+                  "abstract",
+                  "static",
+                  "final",
+                  "private"
+                ],
+                "correctAnswer": "final",
+                "yourAnswer": "final"
+              },
+              {
+                "question": "What is the superclass of all classes in Java?",
+                "options": [
+                  "Super",
+                  "Object",
+                  "Class",
+                  "Parent"
+                ],
+                "correctAnswer": "Object",
+                "yourAnswer": "Super"
+              },
+              {
+                "question": "What does the static keyword mean?",
+                "options": [
+                  "Belongs to a specific instance of the class",
+                  "Used to create constants",
+                  "Belongs to the class itself, not to any specific instance",
+                  "Used to define abstract methods"
+                ],
+                "correctAnswer": "Belongs to the class itself, not to any specific instance",
+                "yourAnswer": "Used to define abstract methods"
               }
             ]
           }

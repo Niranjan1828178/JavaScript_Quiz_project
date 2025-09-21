@@ -66,6 +66,9 @@ async function QuizPage(topic) {
     maincontainer.innerHTML = "";
     maincontainer.classList.remove("flex-col");
     maincontainer.classList.add("flex-row");
+    maincontainer.classList.add("justify-around");
+    maincontainer.classList.add("items-center");
+    
 
     let questionContainer = document.createElement("div");
     questionContainer.classList.add(
@@ -244,6 +247,7 @@ async function QuizPage(topic) {
                 userAnswers[index] = optionIndex;
                 Array.from(optionsContainer.children).forEach((child) => {
                     child.classList.remove("bg-green-600", "text-white");
+                    child.classList.add("bg-white");
                     child.children[0].classList.remove("bg-white");
                     child.children[0].innerHTML = "";
                 });
